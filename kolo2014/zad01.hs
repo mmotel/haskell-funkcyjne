@@ -5,3 +5,7 @@ delete_all x l = [z | z <- l, z /= x]
 delete_all2 x [] = []
 delete_all2 x (e:l) = if (e /= x) then [e]++(delete_all2 x l)
   else (delete_all2 x l)
+
+--b)
+flatten [] = []
+flatten (e:l) = e++(flatten l)
