@@ -3,7 +3,7 @@ data Tree a = Leaf a | Node a (Tree a) (Tree a)
 foldTree g f (Leaf x) = (g x)
 foldTree g f (Node x l p) = f x (foldTree g f l) (foldTree g f p)
 
-inTree = foldTree (\x -> [x]) (\x l p -> [x] ++ l ++ p)
+preTree = foldTree (\x -> [x]) (\x l p -> [x] ++ l ++ p)
 
 t = (Node 1 (Leaf 2) (Node 3 (Leaf 4) (Leaf 5)))
 tl = (Node [1,2,3] (Leaf [2,4,5]) (Node [3] (Leaf [4]) (Leaf [2,5])))

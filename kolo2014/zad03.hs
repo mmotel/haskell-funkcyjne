@@ -3,7 +3,7 @@ data Tree a = Nil | Node a (Tree a) (Tree a)
 foldTree g f Nil = (g Nil)
 foldTree g f (Node x l p) = f x (foldTree g f l) (foldTree g f p)
 
-inTree = foldTree (\x -> []) (\x l p -> [x] ++ l ++ p)
+preTree = foldTree (\x -> []) (\x l p -> [x] ++ l ++ p)
 
 t = (Node 1 (Nil) (Node 2 (Nil) (Node 3 (Nil) (Nil)) ))
 tl = (Node [1,2,3] (Nil) (Node [3] (Nil) (Node [2,5] (Nil) (Nil)) ))
