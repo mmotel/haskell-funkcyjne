@@ -1,0 +1,10 @@
+\x -> f x y
+
+x :: a
+y :: b
+
+f :: x -> y -> t
+
+(f x y) :: t
+
+(\x -> f x y) :: a -> t
