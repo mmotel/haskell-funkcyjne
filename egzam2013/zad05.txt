@@ -1,0 +1,27 @@
+a)
+(i) map length
+
+length :: [a] -> Int
+map :: (a' -> b) -> [a'] -> [b]
+
+a'/[a]
+
+map length :: [[a]] -> [Int]
+
+(ii) \x -> x 5
+
+x :: Int -> a
+5 :: Int
+
+(\x -> x 5) :: (Int -> a) -> a
+
+b) \x -> a * x
+
+(*) :: Int -> Int -> Int
+a :: a'
+x :: b
+
+a'/Int, b/Int
+
+(a * x) :: Int
+(\x -> a * x) :: Int -> Int
