@@ -1,0 +1,31 @@
+a) foldl (+)
+
+  foldl :: (b -> a -> b) -> b -> [a] -> b
+  (+) :: a' -> a' -> a'
+       a'/Int => Int -> Int -> Int
+
+  foldl (+) :: a/Int, b/Int => Int -> [Int] -> Int
+
+b) square (f (g x))
+
+square :: a -> a
+          a/Int => Int -> Int
+
+(f (g x)) :: a
+
+f :: b -> a
+
+g :: c -> b
+
+(g x) :: b
+
+square (f (g x)) :: a
+                    a/Int => Int
+
+c) g w x y z = if w < x then sum y else sum z
+
+sum :: [a] -> a
+
+(<) :: b -> b -> Bool
+
+g w x y z :: b -> b -> [a] -> [a] -> a
