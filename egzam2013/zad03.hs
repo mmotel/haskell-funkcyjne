@@ -15,7 +15,7 @@ foldBoolExpr f g h (Value a) = (f a)
 foldBoolExpr f g h (And a b) = g (foldBoolExpr f g h a) (foldBoolExpr f g h b)
 foldBoolExpr f g h (Not a) = h (foldBoolExpr f g h a)
 
--- (Bool -> t) -> (t -> t -> t) -> (t -> t) -> BoolExpr -> t
+-- foldBoolExpr :: (Bool -> t) -> (t -> t -> t) -> (t -> t) -> BoolExpr -> t
 
 --c)
 eval2 be = foldBoolExpr (\e -> e) (\e f -> (e && f)) (\e -> (not e)) be
