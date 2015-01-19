@@ -11,11 +11,10 @@ eval (Not a) = not (eval a)
 
 
 --b)
-foldBoolExpr l = foldl (\e x -> And e x) (Value True) l
--- foldBoolExpr :: [BoolExpr] -> BoolExpr
+foldBoolExpr f g h (Value a) = (f a)
+foldBoolExpr f g h (And a b) = g (foldBoolExpr f g h a) (foldBoolExpr f g h b)
+foldBoolExpr f g h (Not a) = h (foldBoolExpr f g h a)
 
-FoldBoolExpr f g h (Value a) = (f a)
-FoldBoolExpr f g h (And a b) = g (FoldBoolExpr f g h a) (FoldBoolExpr f g h b) 
-FoldBoolExpr f g h (Not a) = h (FoldBoolExpr a)
+-- (Bool -> t) -> (t -> t -> t) -> (t -> t) -> BoolExpr -> t
 
 --c) ?
