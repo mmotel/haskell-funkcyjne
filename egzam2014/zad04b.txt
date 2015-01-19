@@ -1,0 +1,30 @@
+(i) map square
+
+map :: (a -> b) -> [a] -> [b]
+square :: Int -> Int -> Int
+
+a/Int, b/Int
+
+map square :: [Int] -> [Int]
+
+(ii) f a b c = if a b then a b else a c
+
+a :: a' -> b'
+b :: a'
+c :: a'
+
+(a b) :: b'
+(a c) :: b'
+
+b'/Bool
+
+f :: (a' -> Bool) -> a' -> a' -> Bool
+
+(iii) \f -> f a 2
+
+a :: a'
+2 :: Int
+
+f :: a' -> Int -> b
+
+(\f -> f a 2) :: (a' -> Int -> b) -> b
